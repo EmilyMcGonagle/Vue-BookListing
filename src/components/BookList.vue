@@ -7,7 +7,7 @@
 <script>
 export default {
     name: 'BookList',
-    data(){
+    data: () => {
         title:"All Books"
     }
 }

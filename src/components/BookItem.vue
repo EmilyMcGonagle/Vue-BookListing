@@ -5,8 +5,8 @@
 
 <script>
 export default {
+    name: 'BookItem',
     data: () => {
-        name: 'BookItem';
         props: [
             'book',
         ]

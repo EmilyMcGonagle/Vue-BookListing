@@ -4,14 +4,21 @@
         <h1>{{title}}</h1>
         <ul>
             <!-- loops through array of books from data and prints title and author -->
-            <li v-for='book in books'>{{book.title}}:{{book.author}}</li>
+            <!-- :book passes book to book item as a prop -->
+            <book-item v-for='book in books' :book='book'></book-item>
         </ul>
     </div>
 </template>
 
 <script>
+// import child component
+import BookItem from './BookItem';
 export default {
     name: 'BookList',
+    // sets value of components to object containing child comp.
+    components: {
+        BookItem
+    },
     data: () => {
         // stores list of books
         return {
